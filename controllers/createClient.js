@@ -1,4 +1,4 @@
-const ClientModal = require("../../jsonModels/ClientModal");
+const ClientModal = require("./../jsonModels/clientModal");
 
 const createClient = async (req, res) => {
     try {

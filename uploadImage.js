@@ -6,7 +6,6 @@ cloudinary.config({
     api_secret: 'aeMyzo84dWEkdkHlAYce4gCSNxU'
   });
 
-
   const opts = {
     overwrite: true,
     invalidate: true,

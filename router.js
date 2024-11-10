@@ -1,5 +1,5 @@
-const {createClient} = require('./controllers/ClientController/createClient')
-const {emailSend} = require('./controllers/ClientController/email')
+const {createClient} = require('./controllers/createClient')
+const {emailSend} = require('./controllers/email')
 
 const router = require("express").Router();
 
