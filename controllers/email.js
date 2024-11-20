@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const emailSend = async (req, res) => {
     try {
         const { 
-            pasportImage,
+            passportImage,
             ticketImage,
             firstName,
             lastName,
@@ -12,7 +12,7 @@ const emailSend = async (req, res) => {
             city,
             address,
             problem,
-            fightNumber,
+            flightNumber,
             date,
             description,
         } = req.body;
@@ -37,7 +37,7 @@ const emailSend = async (req, res) => {
             attachments: [
                 {
                     filename: 'pasport-image.jpg',
-                    path: String(pasportImage)
+                    path: String(passportImage)
                 },
                 {
                     filename: 'ticket-image.jpg',
@@ -53,7 +53,7 @@ const emailSend = async (req, res) => {
                 <p>ქალაქი: ${city}</p>
                 <p>მისამართი: ${address}</p>
                 <p>პრობლემა: ${problem}</p>
-                <p>ფრენის ნომერი: ${fightNumber}</p>
+                <p>ფრენის ნომერი: ${flightNumber}</p>
                 <p>დრო: ${date}</p>
                 <p>აღწერა: ${description}</p>
                 `

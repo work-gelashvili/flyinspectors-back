@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const ClientSchema = new mongoose.Schema({
-    pasportImage: {
+    passportImage: {
         type: String,
         required: true,
     },
@@ -37,7 +37,7 @@ const ClientSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    fightNumber: {
+    flightNumber: {
         type: String,
         required: true,
     },

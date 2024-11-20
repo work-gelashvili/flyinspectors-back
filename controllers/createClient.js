@@ -4,7 +4,7 @@ const createClient = async (req, res) => {
     try {
     
         const {
-            pasportImage,
+            passportImage,
             ticketImage,
             firstName,
             lastName,
@@ -13,7 +13,7 @@ const createClient = async (req, res) => {
             city,
             address,
             problem,
-            fightNumber,
+            flightNumber,
             date,
             description,
         } = req.body;
@@ -21,7 +21,7 @@ const createClient = async (req, res) => {
     
     
         const client = new ClientModal({
-            pasportImage: pasportImage,
+            passportImage: passportImage,
             ticketImage: ticketImage,
             firstName: firstName,
             lastName: lastName,
@@ -30,7 +30,7 @@ const createClient = async (req, res) => {
             city: city,
             address: address,
             problem: problem,
-            fightNumber: fightNumber,
+            flightNumber: flightNumber,
             date: date,
             description: description,
         });
