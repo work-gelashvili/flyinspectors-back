@@ -9,6 +9,14 @@ const ClientSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    otherImage: {
+        type: String,
+        required: true,
+    },
+    userId: {
+        type: String,
+        required: true,
+    },
     firstName: {
         type: String,
         required: true,
@@ -42,6 +50,10 @@ const ClientSchema = new mongoose.Schema({
         required: true,
     },
     date: {
+        type: String,
+        required: true,
+    },
+    select: {
         type: String,
         required: true,
     },

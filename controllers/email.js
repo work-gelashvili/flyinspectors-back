@@ -5,6 +5,8 @@ const emailSend = async (req, res) => {
         const { 
             passportImage,
             ticketImage,
+            otherImage,
+            userId,
             firstName,
             lastName,
             phone,
@@ -14,6 +16,7 @@ const emailSend = async (req, res) => {
             problem,
             flightNumber,
             date,
+            select,
             description,
         } = req.body;
         console.log(req.body)
@@ -42,12 +45,17 @@ const emailSend = async (req, res) => {
                 {
                     filename: 'ticket-image.jpg',
                     path: String(ticketImage)
+                },
+                {
+                    filename: 'other-image.jpg',
+                    path: String(otherImage)
                 }
             ],
             html: `
                 <h1>მოგესალმებით</h1>
                 <p>სახელი: ${firstName}</p>
                 <p>გვარი: ${lastName}</p>
+                <p>იუზერის ID: ${userId}</p>
                 <p>ტელ: ${phone}</p>
                 <p>ემაილი: ${email}</p>
                 <p>ქალაქი: ${city}</p>
@@ -55,6 +63,7 @@ const emailSend = async (req, res) => {
                 <p>პრობლემა: ${problem}</p>
                 <p>ფრენის ნომერი: ${flightNumber}</p>
                 <p>დრო: ${date}</p>
+                <p>select: ${select}</p>
                 <p>აღწერა: ${description}</p>
                 `
         };
