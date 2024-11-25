@@ -12,6 +12,6 @@ router.get("/", (req, res) => {
 router.post("/client", createClient);
 router.post("/email", emailSend);
 router.get("/client", getClient);
-router.get("/id", getID);
+router.post("/id", getID);
 
 module.exports = router;

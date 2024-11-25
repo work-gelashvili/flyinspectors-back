@@ -39,6 +39,7 @@ const createClient = async (req, res) => {
             date: date,
             select: select,
             description: description,
+            status: "In progress"
         });
     
         const clients = await client.save();
