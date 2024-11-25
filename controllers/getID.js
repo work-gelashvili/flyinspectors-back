@@ -2,8 +2,7 @@ const ClientModal = require("../jsonModels/clientModal");
 
 const getID = async (req, res) => {
     try {
-      const { userId } = req.query;
-      console.log(userId)
+      const { userId } = req.body;
       const users = await ClientModal.find();
 
       const user = users.filter((item) =>item.userId === userId)
