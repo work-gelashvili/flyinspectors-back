@@ -20,7 +20,6 @@ const createClient = async (req, res) => {
             select,
             description,
         } = req.body;
-        console.log(req.body)
     
     
         const client = new ClientModal({
