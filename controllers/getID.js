@@ -3,10 +3,8 @@ const ClientModal = require("../jsonModels/clientModal");
 const getID = async (req, res) => {
     try {
       const { userId } = req.query;
-  
-      const user = await ClientModal.find({
-        userId: userId
-      });
+      console.log(userId)
+      const user = await ClientModal.find();
   
       return res.status(200).send(user);
     } catch (error) {
