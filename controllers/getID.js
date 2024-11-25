@@ -4,7 +4,9 @@ const getID = async (req, res) => {
     try {
       const { userId } = req.query;
       console.log(userId)
-      const user = await ClientModal.find();
+      const users = await ClientModal.find();
+
+      const user = users.filter((item) =>item.userId === userId)
   
       return res.status(200).send(user);
     } catch (error) {
