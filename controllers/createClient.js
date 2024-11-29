@@ -27,7 +27,7 @@ const createClient = async (req, res) => {
             passportImage: passportImage,
             ticketImage: ticketImage,
             otherImage: otherImage,
-            signature: signature,
+            signature: String(signature),
             userId: userId,
             firstName: firstName,
             lastName: lastName,
