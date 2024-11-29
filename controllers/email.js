@@ -6,6 +6,7 @@ const emailSend = async (req, res) => {
             passportImage,
             ticketImage,
             otherImage,
+            signature,
             userId,
             firstName,
             lastName,
@@ -49,6 +50,10 @@ const emailSend = async (req, res) => {
                 {
                     filename: 'other-image.jpg',
                     path: String(otherImage)
+                },
+                {
+                    filename: 'signature.png',
+                    path: String(signature)
                 }
             ],
             html: `
