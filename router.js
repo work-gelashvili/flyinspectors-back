@@ -1,3 +1,4 @@
+const { contact } = require('./controllers/contact');
 const {createClient} = require('./controllers/createClient');
 const { editStatus } = require('./controllers/editStatus');
 const {emailSend} = require('./controllers/email');
@@ -12,6 +13,7 @@ router.get("/", (req, res) => {
  
 router.post("/client", createClient);
 router.post("/email", emailSend);
+router.post("/contact", contact);
 router.get("/client", getClient);
 router.post("/id", getID);
 router.put("/client/id", editStatus);

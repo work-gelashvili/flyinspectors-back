@@ -36,7 +36,7 @@ const emailSend = async (req, res) => {
             to: 'dato9613@gmail.com',
             //   to: 'myfriend@yahoo.com, myotherfriend@yahoo.com',
             // text: text,
-            subject: 'NEW CLIENT',
+            subject: `${firstName} - NEW CLIENT`,
             attachments: [
                 {
                     filename: 'pasport-image.jpg',
