@@ -1,4 +1,4 @@
-const ServicesSchema = require("../jsonModels/services");
+const servicesModal = require("../jsonModels/servicesModal");
 
 const createService = async (req, res) => {
     try {
@@ -8,10 +8,10 @@ const createService = async (req, res) => {
             description
         } = req.body;
 
-        console.log(1)
+        console.log(title, description)
     
     
-        const client = new ClientModal({
+        const client = new servicesModal({
             title: title,
             description: description
         });

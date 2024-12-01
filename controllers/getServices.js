@@ -1,10 +1,10 @@
-const ServicesSchema = require("../jsonModels/services");
+const servicesModal = require("../jsonModels/servicesModal");
 
 const getServices = async (req, res) => {
     try {
       
   
-      const clients = await ServicesSchema.find();
+      const clients = await servicesModal.find();
   
       return res.status(200).send(clients);
     } catch (error) {
