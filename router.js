@@ -5,6 +5,7 @@ const { editStatus } = require('./controllers/editStatus');
 const {emailSend} = require('./controllers/email');
 const { getClient } = require('./controllers/getClient');
 const { getID } = require('./controllers/getID');
+const { getServices } = require('./controllers/getServices');
 
 const router = require("express").Router();
 
@@ -19,6 +20,6 @@ router.get("/client", getClient);
 router.post("/id", getID);
 router.put("/client/id", editStatus);
 router.post("/services", createService);
-router.get("/services", getClient);
+router.get("/services", getServices);
 
 module.exports = router;
