@@ -7,6 +7,8 @@ const createService = async (req, res) => {
             title,
             description
         } = req.body;
+
+        console.log(1)
     
     
         const client = new ClientModal({
