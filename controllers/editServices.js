@@ -2,17 +2,17 @@ const servicesModal = require("../jsonModels/servicesModal");
 
 const editServices = async (req, res) => {
     try {
-      const { _id, title, description } = req.body;
+      const { id, title, description } = req.body;
       // const { userId, status } = req.query;
       
       const clients = await servicesModal.find();
+      console.log(description)
       
-      
-      const filtered = clients.filter((item) => item.userId === userId)
+      const filtered = clients.filter((item) => item.id === id)
       console.log(filtered)
 
       await servicesModal.findOneAndUpdate(
-        { _id: _id },
+        { id: id },
         { title: title },
         { description: description }
       );

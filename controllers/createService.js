@@ -4,6 +4,7 @@ const createService = async (req, res) => {
     try {
     
         const {
+            id,
             title,
             description
         } = req.body;
@@ -12,6 +13,7 @@ const createService = async (req, res) => {
     
     
         const client = new servicesModal({
+            id: id,
             title: title,
             description: description
         });
