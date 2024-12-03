@@ -10,7 +10,7 @@ const createRateSection = async (req, res) => {
             icon
         } = req.body;
 
-        console.log(title, description)
+        console.log(title)
     
     
         const client = new rateSectionModel({
