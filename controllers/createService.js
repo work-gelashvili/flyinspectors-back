@@ -14,8 +14,14 @@ const createService = async (req, res) => {
     
         const client = new servicesModal({
             id: id,
-            title: title,
-            description: description
+            title: {
+                en: title.en,
+                ka: title.ka
+            },
+            description: {
+                en: description.en,
+                ka: description.ka
+            },
         });
     
         const clients = await client.save();

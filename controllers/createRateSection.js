@@ -15,8 +15,14 @@ const createRateSection = async (req, res) => {
     
         const client = new rateSectionModel({
             id: id,
-            title: title,
-            description: description,
+            title: {
+                en: title.en,
+                ka: title.ka
+            },
+            description: {
+                en: description.en,
+                ka: description.ka
+            },
             icon: icon
         });
     

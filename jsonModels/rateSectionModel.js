@@ -6,11 +6,11 @@ const RateSchema = new mongoose.Schema({
         required: true,
     },
     title: {
-        type: String,
+        type: Object,
         required: true,
     },
     description: {
-        type: String,
+        type: Object,
         required: true,
     },
     icon: {

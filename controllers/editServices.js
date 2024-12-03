@@ -14,9 +14,15 @@ const editServices = async (req, res) => {
       await servicesModal.findOneAndUpdate(
         { id: id },
         { 
-          title: title,
-          description: description
-         }
+          title: {
+            en: title.en,
+            ka: title.ka
+          },
+          description: {
+            en: description.en,
+            ka: description.ka
+          },
+        }
       );
     
     

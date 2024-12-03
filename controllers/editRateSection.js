@@ -14,10 +14,16 @@ const editRateSection = async (req, res) => {
       await rateSectionModel.findOneAndUpdate(
         { id: id },
         { 
-          title: title,
-          description: description,
+          title: {
+            en: title.en,
+            ka: title.ka
+          },
+          description: {
+              en: description.en,
+              ka: description.ka
+          },
           icon: icon
-         }
+        }
       );
     
     
