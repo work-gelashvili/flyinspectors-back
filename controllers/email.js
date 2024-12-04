@@ -20,7 +20,7 @@ const emailSend = async (req, res) => {
             select,
             description,
         } = req.body;
-        console.log(req.body)
+        console.log(1111,req.body)
 
         var nodemailer = require('nodemailer');
 
