@@ -19,6 +19,14 @@ var corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
+var allowCrossDomain = function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', "*");
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+}
+app.use(allowCrossDomain);
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -27,7 +35,7 @@ app.use(bodyParser.json());
 app.use(router);
 
 mongoose
-  .connect(process.env.MONGODB_URL, {
+  .connect('mongodb+srv://katsitadzez:Z23NYfXNELfVSjBq@flyinspectors.38j7l.mongodb.net/?retryWrites=true&w=majority&appName=flyinspectors', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
