@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const ClientSchema = new mongoose.Schema({
     passportImage: {
         type: String,
-        required: false,
+        required: true,
     },
     ticketImage: {
         type: String,
-        required: false,
+        required: true,
     },
     otherImage: {
         type: String,
@@ -17,7 +17,7 @@ const ClientSchema = new mongoose.Schema({
         public_id: String,
         url: String,
         type: String,
-        required: false,
+        required: true,
     },
     userId: {
         type: String,
