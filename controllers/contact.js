@@ -14,16 +14,18 @@ const contact = async (req, res) => {
         var nodemailer = require('nodemailer');
 
         var transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: 'mail.flyinspectors.com',
+            port: 465, // 465 for SSL or 587 for STARTTLS
+            secure: true, // Use true for 465, false for other ports
             auth: {
-                user: process.env.gmail_user,
-                pass: process.env.gmail_pass
-            }
+                user: 'mailsend@flyinspectors.com', // Your email
+                pass: 'Mdri@$@t{tMX', // Your email password or app password
+            },
         });
 
         var mailOptions = {
             from: email,
-            to: 'dato9613@gmail.com',
+            to: 'team@flyinspectors.com',
             //   to: 'myfriend@yahoo.com, myotherfriend@yahoo.com',
             // text: text,
             subject: subject,
