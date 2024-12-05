@@ -46,7 +46,7 @@ const transporter = nodemailer.createTransport({
         // Email options
 const mailOptions = {
     from: email,
-    to: 'team@flyinspectors.com, dato9613@gmail.com',
+    to: 'team@flyinspectors.com',
     subject: `${firstName} - NEW CLIENT`,
     attachments: [
         {
