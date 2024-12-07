@@ -25,7 +25,7 @@ const contact = async (req, res) => {
 
         var mailOptions = {
             from: email,
-            to: `team@flyinspectors.com, ${email}`,
+            to: `team@flyinspectors.com`,
             //   to: 'myfriend@yahoo.com, myotherfriend@yahoo.com',
             // text: text,
             subject: subject,
