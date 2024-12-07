@@ -10,6 +10,7 @@ const { editServices } = require('./controllers/editServices');
 const { createRateSection } = require('./controllers/createRateSection');
 const { getRateSection } = require('./controllers/getRateSection');
 const { editRateSection } = require('./controllers/editRateSection');
+const { clientSendEmail } = require('./controllers/clientSendEmail');
 
 const router = require("express").Router();
 
@@ -19,10 +20,12 @@ router.get("/", (req, res) => {
  
 router.post("/client", createClient);
 router.post("/email", emailSend);
+router.post("/sendtoclient", clientSendEmail);
 router.post("/contact", contact);
 router.get("/client", getClient);
 router.post("/id", getID);
 router.put("/client/id", editStatus);
+
 router.post("/services", createService);
 router.get("/services", getServices);
 router.put("/services/id", editServices);

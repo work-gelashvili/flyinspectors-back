@@ -1,25 +1,12 @@
 const fs = require('fs');
 const nodemailer = require('nodemailer');
 
-const emailSend = async (req, res) => {
+const clientSendEmail = async (req, res) => {
     try {
         const { 
-            passportImage,
-            ticketImage,
-            otherImage,
-            signature,
             userId,
             firstName,
-            lastName,
-            phone,
             email,
-            city,
-            address,
-            problem,
-            flightNumber,
-            date,
-            select,
-            description,
         } = req.body;
         
         const transporter = nodemailer.createTransport({
@@ -34,42 +21,13 @@ const emailSend = async (req, res) => {
         });
 
         const mailOptions = {
-            from: email,
-            to: `team@flyinspectors.com`,
-            subject: `${firstName} - NEW CLIENT`,
-            attachments: [
-                {
-                    filename: 'pasport-image.jpg',
-                    path: String(passportImage)
-                },
-                {
-                    filename: 'ticket-image.jpg',
-                    path: String(ticketImage)
-                },
-                {
-                    filename: 'other-image.jpg',
-                    path: String(otherImage)
-                },
-                {
-                    filename: 'signature.png',
-                    path: String(signature)
-                }
-            ],
-            // text: 'Hello, this is a test email!',
+            from: 'team@flyinspectors.com',
+            to: email,
+            subject: `flyinspectors.com`,
+            
             html: `
-                <h1>მოგესალმებით</h1>
-                <p>სახელი: ${firstName}</p>
-                <p>გვარი: ${lastName}</p>
-                <p>ID: ${userId}</p>
-                <p>ტელ: ${phone}</p>
-                <p>ემაილი: ${email}</p>
-                <p>ქალაქი: ${city}</p>
-                <p>მისამართი: ${address}</p>
-                <p>პრობლემა: ${problem}</p>
-                <p>ფრენის ნომერი: ${flightNumber}</p>
-                <p>დრო: ${date}</p>
-                <p>select: ${select}</p>
-                <p>აღწერა: ${description}</p>
+                <h3>მოგესალმებით ${firstName}, განაცხადი წარმატებით გამოიგზავნა</h3>
+                <h1>თქვენი ID: ${userId}</h1>
             `
         };
 
@@ -88,7 +46,7 @@ const emailSend = async (req, res) => {
     }
 };
 
-module.exports = { emailSend };
+module.exports = { clientSendEmail };
 
 
 
