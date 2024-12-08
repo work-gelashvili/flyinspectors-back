@@ -34,9 +34,10 @@ const emailSend = async (req, res) => {
         });
 
         const mailOptions = {
-            from: email,
+            from: 'info@flyinspectors.com',
             to: `team@flyinspectors.com`,
-            subject: `${firstName} - NEW CLIENT`,
+            cc: `${email}`,
+            subject: 'Compensation Form',
             attachments: [
                 {
                     filename: 'pasport-image.jpg',
@@ -57,19 +58,20 @@ const emailSend = async (req, res) => {
             ],
             // text: 'Hello, this is a test email!',
             html: `
-                <h1>მოგესალმებით</h1>
-                <p>სახელი: ${firstName}</p>
-                <p>გვარი: ${lastName}</p>
                 <p>ID: ${userId}</p>
-                <p>ტელ: ${phone}</p>
-                <p>ემაილი: ${email}</p>
-                <p>ქალაქი: ${city}</p>
-                <p>მისამართი: ${address}</p>
-                <p>პრობლემა: ${problem}</p>
-                <p>ფრენის ნომერი: ${flightNumber}</p>
-                <p>დრო: ${date}</p>
-                <p>select: ${select}</p>
-                <p>აღწერა: ${description}</p>
+                <p>First Name: ${firstName}</p>
+                <p>Last Name: ${lastName}</p>
+                <p>Phone: ${phone}</p>
+                <p>E-mail: ${email}</p>
+                <br />
+                <p>City: ${city}</p>
+                <p>Address: ${address}</p>
+                <br />
+                <p>Problem: ${problem}</p>
+                <p>Flight Number: ${flightNumber}</p>
+                <p>Flight Date: ${date}</p>
+                <p>Select: ${select}</p>
+                <p>Description: ${description}</p>
             `
         };
 
