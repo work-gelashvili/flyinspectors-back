@@ -35,8 +35,9 @@ const emailSend = async (req, res) => {
 
         const mailOptions = {
             from: 'info@flyinspectors.com',
+            replyTo: `${email}`,
             to: `team@flyinspectors.com`,
-            subject: 'Compensation Form',
+            subject: `Compensation Form - ${email}`,
             attachments: [
                 {
                     filename: 'pasport-image.jpg',
