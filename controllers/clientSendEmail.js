@@ -21,13 +21,15 @@ const clientSendEmail = async (req, res) => {
         });
 
         const mailOptions = {
-            from: 'team@flyinspectors.com',
+            from: 'info@flyinspectors.com',
             to: email,
             subject: `flyinspectors.com`,
-            
             html: `
-                <h3>მოგესალმებით ${firstName}, განაცხადი წარმატებით გამოიგზავნა</h3>
-                <h1>თქვენი ID: ${userId}</h1>
+            <p>Dear ${firstName}, We have successfully received your application.</p>
+            <p>Your case number is: <strong> ${userId}</strong></p>
+            <p>You can check case status anytime to the following link: www.flyinspectors.com/submit-claim</p>
+            <p>Best regards</p>
+            <p>Flyinspectors</p>
             `
         };
 
