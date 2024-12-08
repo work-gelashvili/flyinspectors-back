@@ -4,9 +4,8 @@ const nodemailer = require('nodemailer');
 const clientSendEmail = async (req, res) => {
     try {
         const { 
-            userId,
-            firstName,
             email,
+            text
         } = req.body;
         
         const transporter = nodemailer.createTransport({
@@ -24,13 +23,7 @@ const clientSendEmail = async (req, res) => {
             from: 'info@flyinspectors.com',
             to: email,
             subject: `flyinspectors.com`,
-            html: `
-            <p>Dear ${firstName}, We have successfully received your application.</p>
-            <p>Your case number is: <strong> ${userId}</strong></p>
-            <p>You can check case status anytime to the following link: www.flyinspectors.com/submit-claim</p>
-            <p>Best regards</p>
-            <p>Flyinspectors</p>
-            `
+            html: text
         };
 
         transporter.sendMail(mailOptions, function(error, info){
