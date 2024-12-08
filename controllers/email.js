@@ -36,7 +36,6 @@ const emailSend = async (req, res) => {
         const mailOptions = {
             from: 'info@flyinspectors.com',
             to: `team@flyinspectors.com`,
-            cc: `${email}`,
             subject: 'Compensation Form',
             attachments: [
                 {
