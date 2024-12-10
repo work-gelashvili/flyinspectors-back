@@ -70,6 +70,10 @@ const ClientSchema = new mongoose.Schema({
     status: {
         type: String,
         required: true,
+    },
+    oldStatus: {
+        type: String,
+        required: true,
     }
 });
 

@@ -2,18 +2,20 @@ const ClientModal = require("./../jsonModels/clientModal");
 
 const editStatus = async (req, res) => {
     try {
-      const { userId, status } = req.body;
+      const { userId, status, oldStatus } = req.body;
       // const { userId, status } = req.query;
       
       const clients = await ClientModal.find();
       
       
       const filtered = clients.filter((item) => item.userId === userId)
-      console.log(filtered)
+      // console.log(filtered)
 
       await ClientModal.findOneAndUpdate(
         { userId: userId },
-        { status: status }
+        { status: status,
+          oldStatus: oldStatus 
+        }
       );
     
     

@@ -37,11 +37,11 @@ const emailSend = async (req, res) => {
             from: 'info@flyinspectors.com',
             replyTo: `${email}`,
             to: `team@flyinspectors.com`,
-            subject: `Compensation Form - ${email}`,
+            subject: `Compensation Form - ${userId}`,
             attachments: [
                 {
                     filename: 'pasport-image.jpg',
-                    path: String(passportImage)
+                    path: String(passportImage),
                 },
                 {
                     filename: 'ticket-image.jpg',
