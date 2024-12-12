@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const ClientSchema = new mongoose.Schema({
     passportImage: {
         type: String,
-        required: true,
+        required: false,
     },
     ticketImage: {
         type: String,
-        required: true,
+        required: false,
     },
     otherImage: {
         type: String,

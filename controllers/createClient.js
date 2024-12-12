@@ -41,7 +41,7 @@ const createClient = async (req, res) => {
             date: date,
             select: select,
             description: description,
-            status: "In progress",
+            status: "Application has received",
             oldStatus: oldStatus
         });
     
