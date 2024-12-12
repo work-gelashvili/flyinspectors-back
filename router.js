@@ -15,6 +15,9 @@ const { deleteClient } = require('./controllers/deleteClient');
 const { createContact } = require('./controllers/createContact');
 const { getContactList } = require('./controllers/getContactList');
 const { editContactList } = require('./controllers/editContactList');
+const { createConditions } = require('./controllers/createConditions');
+const { editConditions } = require('./controllers/editConditions');
+const { getConditions } = require('./controllers/getConditions');
 
 
 const router = require("express").Router();
@@ -42,6 +45,11 @@ router.put("/rate/id", editRateSection);
 router.post("/contactlist", createContact);
 router.get("/contactlist", getContactList);
 router.put("/contactlist", editContactList);
+
+
+router.post("/conditions", createConditions);
+router.get("/conditions", getConditions);
+router.put("/conditions", editConditions);
 
 
 module.exports = router;
