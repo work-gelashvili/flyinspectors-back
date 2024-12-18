@@ -9,8 +9,14 @@ const editConditions = async (req, res) => {
 
       await ConditionsModal.findOneAndUpdate(
         { 
-          title: title,
-          description: description,
+          title: {
+            en: title.en,
+            ka: title.ka
+          },
+          description: {
+              en: description.en,
+              ka: description.ka
+          }
         }
       );
 

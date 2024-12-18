@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 
 const ConditionsSchema = new mongoose.Schema({
     title: {
-        type: String,
+        type: Object,
         required: false,
     },
     description: {
-        type: String,
+        type: Object,
         required: false,
     }
 });
