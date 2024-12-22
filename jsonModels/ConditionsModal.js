@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { all } = require("../router");
 
 const ConditionsSchema = new mongoose.Schema({
     title: {

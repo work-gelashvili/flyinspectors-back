@@ -5,12 +5,6 @@ const editServices = async (req, res) => {
       const { id, title, description } = req.body;
       // const { userId, status } = req.query;
       
-      const clients = await servicesModal.find();
-      console.log(id, title, description )
-      
-      const filtered = clients.filter((item) => item.id === id)
-      console.log(filtered)
-
       await servicesModal.findOneAndUpdate(
         { id: id },
         { 

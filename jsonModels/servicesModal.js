@@ -3,15 +3,15 @@ const mongoose = require("mongoose");
 const ServicesSchema = new mongoose.Schema({
     id: {
         type: String,
-        required: true,
+        required: false,
     },
     title: {
         type: Object,
-        required: true,
+        required: false,
     },
     description: {
         type: Object,
-        required: true,
+        required: false,
     }
 });
 

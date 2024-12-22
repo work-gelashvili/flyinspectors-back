@@ -3,19 +3,19 @@ const mongoose = require("mongoose");
 const RateSchema = new mongoose.Schema({
     id: {
         type: String,
-        required: true,
+        required: false,
     },
     title: {
         type: Object,
-        required: true,
+        required: false,
     },
     description: {
         type: Object,
-        required: true,
+        required: false,
     },
     icon: {
         type: String,
-        required: true,
+        required: false,
     },
 });
 

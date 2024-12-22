@@ -3,11 +3,13 @@ const ConditionsModal = require("../jsonModels/ConditionsModal");
 const editConditions = async (req, res) => {
     try {
       const { 
+        _id,
         title,
         description
       } = req.body;
 
       await ConditionsModal.findOneAndUpdate(
+        {_id: _id},
         { 
           title: {
             en: title.en,

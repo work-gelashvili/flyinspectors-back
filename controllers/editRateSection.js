@@ -5,11 +5,6 @@ const editRateSection = async (req, res) => {
       const { id, title, description, icon } = req.body;
       // const { userId, status } = req.query;
       
-      const clients = await rateSectionModel.find();
-      console.log(id, title, description )
-      
-      const filtered = clients.filter((item) => item.id === id)
-      console.log(filtered)
 
       await rateSectionModel.findOneAndUpdate(
         { id: id },
