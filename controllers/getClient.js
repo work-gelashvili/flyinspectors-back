@@ -4,7 +4,7 @@ const getClient = async (req, res) => {
     try {
         // Extract page and limit from the query parameters, with defaults
         const page = parseInt(req.query.page) || 1;  // Default page is 1
-        const limit = parseInt(req.query.limit) || 20;  // Default limit is 10
+        const limit = parseInt(req.query.limit) || 200;  // Default limit is 10
 
         // Calculate the number of items to skip
         const skip = (page - 1) * limit;
