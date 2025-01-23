@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(router);
 
 mongoose
-  .connect('mongodb+srv://katsitadzez:Z23NYfXNELfVSjBq@flyinspectors.38j7l.mongodb.net/flyinspectors2?retryWrites=true&w=majority', {
+  .connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
