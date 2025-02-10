@@ -20,7 +20,8 @@ const createClient = async (req, res) => {
             date,
             select,
             description,
-            oldStatus
+            oldStatus,
+            createDate
         } = req.body;
     
     
@@ -42,7 +43,8 @@ const createClient = async (req, res) => {
             select: select,
             description: description,
             status: "Application has received",
-            oldStatus: oldStatus
+            oldStatus: oldStatus,
+            createDate: createDate
         });
     
         const clients = await client.save();

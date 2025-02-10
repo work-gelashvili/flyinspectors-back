@@ -74,6 +74,10 @@ const ClientSchema = new mongoose.Schema({
     oldStatus: {
         type: String,
         required: true,
+    },
+    createDate: {
+        type: String,
+        required: true,
     }
 });
 
