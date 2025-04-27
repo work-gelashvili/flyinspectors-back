@@ -26,9 +26,9 @@ const createClient = async (req, res) => {
     
     
         const client = new ClientModal({
-            passportImage: passportImage,
-            ticketImage: ticketImage,
-            otherImage: otherImage,
+            passportImage: String(passportImage),
+            ticketImage: String(ticketImage),
+            otherImage: String(otherImage),
             signature: String(signature),
             userId: userId,
             firstName: firstName,

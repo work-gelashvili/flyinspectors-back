@@ -18,7 +18,7 @@ const { editContactList } = require('./controllers/editContactList');
 const { createConditions } = require('./controllers/createConditions');
 const { editConditions } = require('./controllers/editConditions');
 const { getConditions } = require('./controllers/getConditions');
-
+const { getClientByDateTime } = require('./controllers/getClientByDateTime');
 
 const router = require("express").Router();
 
@@ -32,6 +32,7 @@ router.post("/sendtoclient", clientSendEmail);
 router.post("/contact", contact);
 router.get("/client", getClient);
 router.post("/id", getID);
+router.post("/datetime", getClientByDateTime);
 router.put("/client/id", editStatus);
 router.put("/delete", deleteClient);
 

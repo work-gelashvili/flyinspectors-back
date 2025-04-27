@@ -41,7 +41,7 @@ const emailSend = async (req, res) => {
             attachments: [
                 {
                     filename: 'pasport-image.jpg',
-                    path: String(passportImage),
+                    path: String(passportImage)
                 },
                 {
                     filename: 'ticket-image.jpg',
