@@ -51,22 +51,8 @@ router.put("/contactlist", editContactList);
 router.post("/conditions", createConditions);
 router.get("/conditions", getConditions);
 router.put("/conditions", editConditions);
+router.post("/upload", editConditions);
 
-const multer = require('multer');
-const { uploadImageAsync } = require('./uploadImage');
-
-const storage = multer.memoryStorage();
-const upload = multer({ storage });
-
-router.post('/', upload.single('image'), async (req, res) => {
-  try {
-    const base64Image = `data:${req.file.mimetype};base64,${req.file.buffer.toString('base64')}`;
-    const secureUrl = await uploadImageAsync(base64Image);
-    res.status(200).json({ url: secureUrl });
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to upload image' });
-  }
-});
 
 
 module.exports = router;
